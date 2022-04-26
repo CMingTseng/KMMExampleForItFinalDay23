@@ -4,17 +4,17 @@ object Versions{
     val compile_sdk = 30
 
     val ktor = "1.6.3"
-    val coroutines =  "1.5.0-native-mt"
-    val serialization_version = "1.5.21"
+    val coroutines =  "1.6.1"
+    val serialization_version = "1.6.21"
     val koin = "3.0.2"
     val multiplatformSettings = "0.7.7"
     val sqlDelight = "1.5.0"
-    val kotlin = "1.5.21"
+    val kotlin = "1.6.21"
     val junit = "4.13.2"
 
     object AndroidX {
         val core = "1.6.0"
-        val lifecycle = "2.4.0-alpha02"
+        val lifecycle = "2.2.0"
         val test = "1.3.0"
         val test_ext = "1.1.2"
     }
