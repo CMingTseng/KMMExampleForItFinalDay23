@@ -1,0 +1,39 @@
+buildscript {
+    ext {
+        android_gradle_plugin_version = '4.1.2'//4.1.2 , 4.2.1,7.0.4
+        compileSdkVersion = 29
+        targetSdkVersion = compileSdkVersion
+        minSdkVersion = 19
+        kotlin_version = "1.6.21"
+        kotlin_coroutines_version = "1.6.1"
+        kotlin_ktor_version = "1.6.3"
+        koin_version = "3.0.2"
+        google_services_version = "4.3.8"
+        gson_version = "2.9.0"
+        okhttp_version = '4.9.3'
+        okhttp_interceptor_version = '4.9.3'
+        retrofit_version = '2.9.0'
+        timber_version = '4.7.1'
+        sqldelight_version = '1.5.0'
+        lifecycle_version = '2.2.0'
+    }
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven {
+            url = uri('https://repo.maven.apache.org/maven2/')
+        }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$android_gradle_plugin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+        classpath "com.squareup.sqldelight:gradle-plugin:$sqldelight_version"
+    }
+}
+
+task clean(type: Delete) {
+    delete(rootProject.buildDir)
+}

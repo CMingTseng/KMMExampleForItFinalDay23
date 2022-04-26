@@ -1,0 +1,25 @@
+//pluginManagement {
+//    repositories {
+//        google()
+//        gradlePluginPortal()
+//        mavenCentral()
+//    }
+//}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven {
+            url = uri('https://repo.maven.apache.org/maven2/')
+        }
+    }
+}
+
+rootProject.name = 'KMMExampleForItFinal'
+include ':shared'
+include ':app'
+project(":app").projectDir = file("./androidApp")
